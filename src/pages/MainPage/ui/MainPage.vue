@@ -3,10 +3,6 @@
 </script>
 
 <template>
-  <h1>Main Page</h1>
+  <h1>Главная страница</h1>
 </template>
 
-
-<style scoped>
-
-</style>

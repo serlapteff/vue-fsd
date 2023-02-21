@@ -11,7 +11,7 @@ const toggle = inject<VoidFunction>('toggleTheme')
 </script>
 <template>
   <div>
-    <h1>About</h1>
+    <h1>О компании</h1>
     {{ theme }}
     <button :class="cls.buttonPrime" @click="toggle">toggle</button>
   </div>

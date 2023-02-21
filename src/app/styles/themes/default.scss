@@ -1,8 +1,9 @@
-.app.default {
+:root {
   --bg-color: #efefef;
-
-  --primary-color: #006fff;
-  --secondary-color: #052ba2;
-
-  --link-color: blue;
+  --inverted-bg-color: #333;
+  --primary-color: #050505;
+  --secondary-color: #006fff;
+  --inverted-primary-color: #1dcf1d;
+  --inverted-secondary-color: #049804;
+  --default-link-color: #f8581d;
 }
