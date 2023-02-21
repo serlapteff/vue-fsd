@@ -1,0 +1,21 @@
+@import "./vars/global";
+@import "./themes/default";
+@import "./themes/dark";
+
+.app {
+  font: var(--font-m);
+  padding: 20px;
+
+  background: var(--bg-color);
+  color: var(--primary-color);
+
+  height: 100vh;
+
+  a {
+    color: var(--link-color);
+
+    &:hover {
+      color: var(--secondary-color);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+:root {
+  //line-height: 1.5;
+  //font-weight: 400;
+  //
+  //color-scheme: light dark;
+  //color: rgba(255, 255, 255, 0.87);
+  //background-color: #242424;
+  //
+  //font-synthesis: none;
+  //text-rendering: optimizeLegibility;
+  //-webkit-font-smoothing: antialiased;
+  //-moz-osx-font-smoothing: grayscale;
+  //-webkit-text-size-adjust: 100%;
+
+  --font-family-main: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  --font-size-m: 16px;
+  --font-line-m: 24px;
+  --font-m: var(--font-line-m) / var(--font-line-m) var(--font-family-main);
+
+  --font-size-l: 24px;
+  --font-line-l: 32px;
+  --font-l: var(--font-line-l) / var(--font-line-l) var(--font-family-main);
+}
