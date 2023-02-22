@@ -3,6 +3,7 @@ import { provide, readonly } from 'vue'
 import { useTheme } from '@/shared/lib/composables/theme/useTheme'
 import { NavBar } from '@/widgets/NavBar/index'
 import { Routing } from '@/app/providers/router/index'
+import { SideBar } from '@/widgets/SideBar/'
 
 const { theme, toggleTheme } = useTheme()
 provide('theme', readonly(theme))
@@ -11,8 +12,12 @@ provide('toggleTheme', toggleTheme)
 
 <template>
     <div :class="['app', theme]">
-        <NavBar :name="3" />
-        <button @click="toggleTheme">toggle</button>
-        <Routing />
+        <header>
+            <NavBar />
+        </header>
+        <main class="content">
+            <SideBar />
+            <Routing />
+        </main>
     </div>
 </template>

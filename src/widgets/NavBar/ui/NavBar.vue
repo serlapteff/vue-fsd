@@ -11,7 +11,7 @@
 import cls from './NavBar.module.css'
 
 interface User {
-    name: number
+    name?: number
 }
 
 const props = defineProps<User>()

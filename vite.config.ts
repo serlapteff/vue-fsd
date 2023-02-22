@@ -1,4 +1,4 @@
-import { ConfigEnv, loadEnv, UserConfigExport } from 'vite'
+import { ConfigEnv, loadEnv } from 'vite'
 
 import { BuildPaths } from './config/build/types/config'
 import { buildViteConfig } from './config/build/buildViteConfig'

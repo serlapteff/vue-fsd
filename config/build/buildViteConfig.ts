@@ -5,25 +5,12 @@ import { buildDevServer } from './buildDevServer'
 import { buildPreviewServer } from './buildPreviewServer'
 import { buildResolvers } from './buildResolvers'
 import { buildCssConfig } from './buildCssConfig'
+import { buildConfig } from './buildConfig'
 
 export function buildViteConfig(options: BuildOptions): UserConfigExport {
     const { mode, paths, isDev, envDir } = options
     return defineConfig({
-        build: {
-            rollupOptions: {
-                output: {
-                    assetFileNames: (assetInfo) => {
-                        let extType = assetInfo.name.split('.').at(1)
-                        if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
-                            extType = 'img'
-                        }
-                        return `assets/${extType}/[name]-[hash][extname]`
-                    },
-                    chunkFileNames: 'assets/js/[name]-[hash].js',
-                    entryFileNames: 'assets/js/[name]-[hash].js',
-                },
-            },
-        },
+        build: buildConfig(),
         mode,
         envDir,
         plugins: buildPlugins(options),

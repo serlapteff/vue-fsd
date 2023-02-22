@@ -10,7 +10,7 @@ console.log(theme)
 </script>
 <template>
     <div>
-        <h1>О компании</h1>
+        <div>О компании</div>
         {{ theme }}
         <button :class="cls.buttonPrime" @click="toggle">toggle</button>
     </div>

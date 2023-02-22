@@ -1,6 +1,5 @@
-import { defineAsyncComponent } from 'vue'
-import { MainPage } from 'pages/MainPage'
-import { AboutPage } from 'pages/AboutPage'
+import { MainPage } from '@/pages/MainPage'
+import { AboutPage } from '@/pages/AboutPage'
 
 export enum AppRoutes {
     MAIN = 'main',

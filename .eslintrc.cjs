@@ -12,14 +12,23 @@ module.exports = {
     overrides: [],
     parser: 'vue-eslint-parser',
     parserOptions: {
-        parser: require.resolve('@typescript-eslint/parser'),
+        parser: '@typescript-eslint/parser',
         extraFileExtensions: ['.vue'],
         ecmaFeatures: {
             jsx: true,
         },
         ecmaVersion: 'latest',
         sourceType: 'module',
+        // project: 'tsconfig.json',
+        tsconfigRootDir: __dirname,
     },
     plugins: ['vue', '@typescript-eslint'],
-    rules: {},
+    rules: {
+        "vue/require-default-prop": "off",
+    },
+    settings: {
+        vue: {
+            version: 'detect'
+        }
+    }
 }
