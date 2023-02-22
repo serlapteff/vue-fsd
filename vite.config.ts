@@ -1,5 +1,5 @@
-import {ConfigEnv, defineConfig, loadEnv, UserConfigExport, UserConfig} from 'vite'
-import vue from '@vitejs/plugin-vue'
+import {ConfigEnv, loadEnv, UserConfigExport} from 'vite'
+
 import {BuildPaths} from "./config/build/types/config";
 import {buildViteConfig} from "./config/build/buildViteConfig";
 import path from "path";
@@ -25,7 +25,7 @@ export default ({mode}: ConfigEnv) => {
   const HOST = envFile.parsed.APP_HOST || 'localhost'
   const isDev = mode === 'development'
 
-  const config: UserConfigExport = buildViteConfig({
+  return buildViteConfig({
     isDev,
     mode: mode || 'development',
     port: PORT,
@@ -33,5 +33,4 @@ export default ({mode}: ConfigEnv) => {
     host: HOST,
     paths
   })
-  return config
 }

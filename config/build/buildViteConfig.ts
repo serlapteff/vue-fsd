@@ -1,5 +1,5 @@
 import {BuildOptions} from "./types/config";
-import {defineConfig, UserConfig, UserConfigExport, UserConfigFn} from "vite";
+import {defineConfig, UserConfigExport} from "vite";
 import {buildPlugins} from "./buildPlugins";
 import {buildDevServer} from "./buildDevServer";
 import {buildPreviewServer} from "./buildPreviewServer";

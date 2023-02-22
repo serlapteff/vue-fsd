@@ -1,10 +1,10 @@
 
 <script setup lang="ts">
 import cls from './AboutPage.module.scss'
-import {inject, unref} from 'vue'
+import {inject} from 'vue'
 
 const theme = inject<string>('theme')
-const toggle = inject<VoidFunction>('toggleTheme')
+const toggle = inject<void>('toggleTheme')
 
 // console.log(unref(theme))
 
