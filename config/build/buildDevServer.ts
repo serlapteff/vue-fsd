@@ -1,5 +1,5 @@
-import {ServerOptions} from "vite";
-import {BuildOptions} from "./types/config";
+import { ServerOptions } from 'vite'
+import { BuildOptions } from './types/config'
 
 export function buildDevServer(options: BuildOptions): ServerOptions {
     return {

@@ -1,0 +1,12 @@
+{
+    "extends": [
+        "stylelint-config-standard-scss",
+        "stylelint-config-recommended-vue/scss"
+    ],
+    "rules": {
+        "selector-class-pattern": null,
+        "scss/double-slash-comment-whitespace-inside": null,
+        "scss/comment-no-empty": null
+    },
+    "ignoreFiles": ["dist/assets/css/**.css"]
+}

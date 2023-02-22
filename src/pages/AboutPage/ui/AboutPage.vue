@@ -1,23 +1,17 @@
-
 <script setup lang="ts">
 import cls from './AboutPage.module.scss'
-import {inject} from 'vue'
+import { inject } from 'vue'
 
-const theme = inject<string>('theme')
-const toggle = inject<void>('toggleTheme')
+const theme: string | undefined = inject('theme')
+const toggle: ((payload: MouseEvent) => void) | undefined =
+    inject('toggleTheme')
 
-// console.log(unref(theme))
-
+console.log(theme)
 </script>
 <template>
-  <div>
-    <h1>О компании</h1>
-    {{ theme }}
-    <button :class="cls.buttonPrime" @click="toggle">toggle</button>
-  </div>
+    <div>
+        <h1>О компании</h1>
+        {{ theme }}
+        <button :class="cls.buttonPrime" @click="toggle">toggle</button>
+    </div>
 </template>
-
-
-<style scoped>
-
-</style>

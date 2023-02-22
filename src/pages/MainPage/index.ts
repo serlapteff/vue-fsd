@@ -1,7 +1,7 @@
-// import {defineAsyncComponent} from "vue";
+import { defineAsyncComponent } from 'vue'
+
+export const MainPage = () => import('./ui/MainPage.vue')
+
+// import MainPage from './ui/MainPage.vue'
 //
-// export const MainPage = defineAsyncComponent(() => import('./ui/MainPage.vue'))
-
-import MainPage from "./ui/MainPage.vue";
-
-export {MainPage}
+// export { MainPage }
