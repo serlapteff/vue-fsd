@@ -6,7 +6,8 @@
     "rules": {
         "selector-class-pattern": null,
         "scss/double-slash-comment-whitespace-inside": null,
-        "scss/comment-no-empty": null
+        "scss/comment-no-empty": null,
+        "scss/at-import-partial-extension": null
     },
     "ignoreFiles": ["dist/assets/css/**.css"]
 }

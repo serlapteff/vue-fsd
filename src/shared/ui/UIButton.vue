@@ -6,7 +6,6 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import cls from './UIButton.module.scss'
 
 // const ttt = 'sdsdf'
 export default defineComponent({
@@ -15,8 +14,12 @@ export default defineComponent({
     // },
     setup() {
         return {
-            cls,
+            // cls,
         }
     },
 })
 </script>
+
+<style module="cls">
+@import 'UIButton.module.scss';
+</style>
