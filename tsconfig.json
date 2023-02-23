@@ -17,7 +17,7 @@
         "lib": ["ESNext", "DOM"],
         "skipLibCheck": true,
         "noEmit": true,
-        "types": ["vite-svg-loader", "vite/client"]
+        "types": ["vite-svg-loader", "vite/client", "vitest/globals"]
     },
     "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
     "references": [{ "path": "./tsconfig.node.json" }]
