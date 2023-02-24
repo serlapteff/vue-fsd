@@ -5,7 +5,7 @@ import { RouterView } from 'vue-router'
 <template>
     <RouterView name="default" v-slot="{ Component, route }">
         <transition mode="out-in" :key="route.path">
-            <Suspense>
+            <Suspense timeout="0">
                 <template #default>
                     <component :is="Component" :key="route.path" />
                 </template>
