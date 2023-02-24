@@ -1,5 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useTranslation } from 'i18next-vue'
+
+const { t } = useTranslation()
+</script>
 
 <template>
-    <div>Главная страница</div>
+    <div>{{ t('Главная страница', { ns: 'main' }) }}</div>
 </template>

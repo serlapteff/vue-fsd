@@ -1,5 +1,6 @@
 import { BuildOptions } from './types/config'
 import path from 'path'
+// import { fileURLToPath } from 'node:url'
 
 export function buildResolvers(options: BuildOptions) {
     return {
@@ -7,6 +8,9 @@ export function buildResolvers(options: BuildOptions) {
             {
                 find: '@',
                 replacement: path.resolve(__dirname, options.paths.src),
+                // replacement: fileURLToPath(
+                //     new URL(options.paths.src, import.meta.url)
+                // ),
             },
         ],
     }
