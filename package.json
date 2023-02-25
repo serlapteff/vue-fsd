@@ -17,6 +17,12 @@
     "test:unit": "vitest --config config/vitest/vitest.config.ts",
     "test:unit:watch": "vitest watch --config config/vitest/vitest.config.ts",
     "test:unit:coverage": "vitest run --coverage --config config/vitest/vitest.config.ts",
+    "test:ui": "npx loki test",
+    "test:ui:ok": "npx loki approve",
+    "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
+    "test:ui:report": "npm run test:ui:json && npm run test:ui:html",
+    "test:ui:json": "node scripts/generate-visual-json-report.js",
+    "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
     "storybook": "start-storybook -p 6006 -c ./config/storybook --no-open",
     "build-storybook": "build-storybook -c ./config/storybook"
   },
@@ -50,8 +56,10 @@
     "eslint-plugin-storybook": "^0.6.11",
     "eslint-plugin-vue": "^9.9.0",
     "jsdom": "^21.1.0",
+    "loki": "^0.31.0",
     "postcss-html": "^1.5.0",
     "prettier": "2.8.4",
+    "reg-cli": "^0.17.7",
     "sass": "^1.58.0",
     "stylelint": "^15.2.0",
     "stylelint-config-recommended-vue": "^1.4.0",
@@ -65,5 +73,20 @@
     "vitest": "^0.28.5",
     "vue-loader": "^16.8.3",
     "vue-tsc": "^1.0.24"
+  },
+  "loki": {
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.docker",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "chrome.iphone7": {
+        "target": "chrome.docker",
+        "preset": "iPhone 7"
+      }
+    }
   }
 }

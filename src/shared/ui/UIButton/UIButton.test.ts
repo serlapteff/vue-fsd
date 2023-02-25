@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import UIButton from './UIButton.vue'
+import UIButton from 'src/shared/ui/UIButton/UIButton.vue'
 
 const MessageComponent = {
     template: '<p>{{ msg }}</p>',

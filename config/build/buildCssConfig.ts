@@ -7,7 +7,7 @@ export function buildCssConfig({ isDev }: BuildOptions): CSSOptions {
         modules: {
             localsConvention: 'camelCase',
             generateScopedName: isDev
-                ? '[name]__[local]___[hash:base64:5]'
+                ? '[local]___[hash:base64:5]'
                 : '[hash:base64:5]',
         },
     }

@@ -5,10 +5,10 @@ import { ref } from 'vue'
 
 const locales = {
     ru: {
-        nativeName: 'Русский',
+        nativeName: 'RU',
     },
     en: {
-        nativeName: 'English',
+        nativeName: 'EN',
     },
 }
 const { i18next } = useTranslation()

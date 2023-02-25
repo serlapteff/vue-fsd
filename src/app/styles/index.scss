@@ -26,3 +26,9 @@
     height: calc(100vh - var(--nav-bar-height));
     display: flex;
 }
+
+.page-wrap {
+    //width: 100%;
+    flex-grow: 1;
+    padding: 20px;
+}

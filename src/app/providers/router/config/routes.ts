@@ -1,5 +1,6 @@
 import { MainPage } from '@/pages/MainPage'
 import { AboutPage } from '@/pages/AboutPage'
+import { NotFoundPage } from '@/pages/NotFoundPage'
 
 export enum AppRoutes {
     MAIN = 'main',
@@ -10,7 +11,7 @@ export enum AppRoutes {
 export const RouthPath: Record<AppRoutes, string> = {
     [AppRoutes.MAIN]: '/',
     [AppRoutes.ABOUT]: '/about',
-    [AppRoutes.NOT_FOUND]: '*',
+    [AppRoutes.NOT_FOUND]: '/:pathMatch(.*)*',
 }
 
 export const routes = [
@@ -27,4 +28,5 @@ export const routes = [
         // which is lazy-loaded when the route is visited.
         component: AboutPage,
     },
+    { path: RouthPath['not-found'], name: 'NotFound', component: NotFoundPage },
 ]
