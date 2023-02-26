@@ -4,9 +4,9 @@ import PageLoader from '@/widgets/PageLoader/ui/PageLoader.vue'
 </script>
 
 <template>
-    <div class="page-wrap">
-        <RouterView name="default" v-slot="{ Component, route }">
-            <transition mode="out-in" :key="route.path">
+    <RouterView name="default" v-slot="{ Component, route }">
+        <transition mode="out-in" :key="route.path">
+            <div class="page-wrap">
                 <Suspense timeout="0">
                     <template #default>
                         <component :is="Component" :key="route.path" />
@@ -15,7 +15,7 @@ import PageLoader from '@/widgets/PageLoader/ui/PageLoader.vue'
                         <PageLoader />
                     </template>
                 </Suspense>
-            </transition>
-        </RouterView>
-    </div>
+            </div>
+        </transition>
+    </RouterView>
 </template>
