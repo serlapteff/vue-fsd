@@ -76,6 +76,11 @@
     "vue-tsc": "^1.0.24"
   },
   "loki": {
+    "diffingEngine": "looks-same",
+    "looks-same": {
+      "ignoreCaret": true
+    },
+    "chromeTolerance": false,
     "configurations": {
       "chrome.laptop": {
         "target": "chrome.docker",
