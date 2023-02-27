@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// import cls from './Sidebar.module.scss'
 import { ref } from 'vue'
 import LangSwitcher from '@/widgets/LangSwitcher/ui/LangSwitcher.vue'
 import { useTranslation } from 'i18next-vue'

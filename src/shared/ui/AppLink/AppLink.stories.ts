@@ -1,7 +1,8 @@
 import Applink from './Applink.vue'
 import { Meta, Story, StoryFn } from '@storybook/vue3'
 import { AppLinkVariant } from './types'
-import ThemeDecorator from '../../config/storybook/ThemeDecorator.vue'
+import ThemeDecorator from '@/shared/config/storybook/ThemeDecorator.vue'
+import vueRouter from 'storybook-vue3-router'
 
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
 export default {
@@ -23,6 +24,13 @@ export default {
         // },
         // default: { control: 'text' },
     },
+    decorators: [
+        vueRouter(),
+        () => ({
+            components: { ThemeDecorator },
+            template: `<ThemeDecorator theme="default"><story /></ThemeDecorator>`,
+        }),
+    ],
     args: {
         to: '/',
     },
@@ -70,7 +78,8 @@ PrimaryDark.args = {
 }
 PrimaryDark.decorators = [
     () => ({
-        template: '<div class="app dark"><story /></div>',
+        components: { ThemeDecorator },
+        template: '<ThemeDecorator theme="dark"><story /></ThemeDecorator>',
     }),
 ]
 export const SecondaryDark = Template.bind({})
@@ -79,7 +88,8 @@ SecondaryDark.args = {
 }
 SecondaryDark.decorators = [
     () => ({
-        template: '<div class="app dark"><story /></div>',
+        components: { ThemeDecorator },
+        template: '<ThemeDecorator theme="dark"><story /></ThemeDecorator>',
     }),
 ]
 export const RedDark = Template.bind({})
@@ -88,6 +98,7 @@ RedDark.args = {
 }
 RedDark.decorators = [
     () => ({
-        template: '<div class="app dark"><story /></div>',
+        components: { ThemeDecorator },
+        template: '<ThemeDecorator theme="dark"><story /></ThemeDecorator>',
     }),
 ]

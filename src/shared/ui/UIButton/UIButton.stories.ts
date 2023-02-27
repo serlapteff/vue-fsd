@@ -24,6 +24,12 @@ export default {
         // },
         // default: { control: 'text' },
     },
+    decorators: [
+        () => ({
+            components: { ThemeDecorator },
+            template: `<ThemeDecorator theme="default"><story /></ThemeDecorator>`,
+        }),
+    ],
 } as Meta<UIButton>
 
 // const Template: StoryFn<typeof UIButton> = (args) => ({
@@ -85,14 +91,10 @@ OutlineDark.args = {
     default: 'Text',
     variant: ButtonVariant.OUTLINE,
 }
-// OutlineDark.decorators = [
-//     () => ({
-//         template: '<ThemeDecorator :theme="dark"><story /></ThemeDecorator>',
-//     }),
-// ]
 OutlineDark.decorators = [
     () => ({
-        template: '<div class="app dark" theme="dark"><story /></div>',
+        components: { ThemeDecorator },
+        template: '<ThemeDecorator theme="dark"><story /></ThemeDecorator>',
     }),
 ]
 

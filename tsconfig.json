@@ -1,9 +1,9 @@
 {
     "compilerOptions": {
         "outDir": "./dist/",
-        "baseUrl": "./",
+        "baseUrl": ".",
         "paths": {
-            "@/*": ["./src/*", "./dist/*"]
+            "@/*": ["./src/*", "./dist/*"],
         },
         "target": "es5",
         "useDefineForClassFields": true,
@@ -17,7 +17,7 @@
         "lib": ["ESNext", "DOM"],
         "skipLibCheck": true,
         "noEmit": true,
-        "types": ["vite-svg-loader", "vite/client", "vitest/globals"]
+        "types": ["vite-svg-loader", "vite/client", "vitest/globals", "@vue/test-utils"]
     },
     "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
     "references": [{ "path": "./tsconfig.node.json" }]

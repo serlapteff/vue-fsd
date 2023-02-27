@@ -20,9 +20,9 @@
     "test:ui": "npx loki test",
     "test:ui:ok": "npx loki approve",
     "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
-    "test:ui:report": "npm run test:ui:json && npm run test:ui:html",
     "test:ui:json": "node scripts/generate-visual-json-report.js",
     "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
+    "test:ui:report": "npm run test:ui:json && npm run test:ui:html",
     "storybook": "start-storybook -p 6006 -c ./config/storybook --no-open",
     "build-storybook": "build-storybook -c ./config/storybook"
   },
@@ -62,6 +62,7 @@
     "prettier": "2.8.4",
     "reg-cli": "^0.17.7",
     "sass": "^1.58.0",
+    "storybook-vue3-router": "^2.3.1",
     "stylelint": "^15.2.0",
     "stylelint-config-recommended-vue": "^1.4.0",
     "stylelint-config-standard-scss": "^7.0.1",
