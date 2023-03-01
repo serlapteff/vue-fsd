@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import cls from './Sidebar.module.scss'
+// import cls from './Sidebar.module.scss'
 import { ref } from 'vue'
 // import { useTranslation } from 'i18next-vue'
 import UIButton from '@/shared/ui/UIButton/UIButton.vue'
@@ -25,13 +25,10 @@ const toggleSidebar = (): void => {
 // const paths = computed(() => RouthPath)
 </script>
 <template>
-    <div
-        data-test="sidebar"
-        :class="[cls.Sidebar, { [cls.collapsed]: collapsed }]"
-    >
+    <div data-test="sidebar" :class="['Sidebar', { ['collapsed']: collapsed }]">
         <UIButton
             data-test="toggleSidebar"
-            :class="cls.collapsedBtn"
+            class="collapsedBtn"
             :variant="ButtonVariant.BACKGROUND_INVERT"
             :size="ButtonSize.XL"
             squire
@@ -39,31 +36,31 @@ const toggleSidebar = (): void => {
         >
             {{ collapsed ? '>' : '<' }}
         </UIButton>
-        <div :class="cls.navItems">
+        <div class="navItems">
             <AppLink
-                :class="cls.navItem"
+                class="navItem"
                 :variant="AppLinkVariant.PRIMARY"
                 :to="RouthPath.main"
             >
-                <IconHome :class="cls.icon" />
+                <IconHome class="icon" />
                 <span>{{ $t('Главная') }}</span>
             </AppLink>
             <AppLink
-                :class="cls.navItem"
+                class="navItem"
                 :variant="AppLinkVariant.PRIMARY"
                 :to="RouthPath.about"
             >
-                <IconAbout :class="cls.icon" />
+                <IconAbout class="icon" />
                 <span>{{ $t('О компании') }}</span>
             </AppLink>
         </div>
-        <div :class="cls.switchers">
+        <div class="switchers">
             <ThemeSwitcher />
-            <LangSwitcher :class="cls.langSwitcher" />
+            <LangSwitcher class="langSwitcher" />
         </div>
     </div>
 </template>
 
-<!--<style lang="scss" module="cls">-->
-<!--@import '@/widgets/SideBar/ui/Sidebar.module.scss';-->
-<!--</style>-->
+<style lang="scss" scoped>
+@import '@/widgets/SideBar/ui/Sidebar.scss';
+</style>
