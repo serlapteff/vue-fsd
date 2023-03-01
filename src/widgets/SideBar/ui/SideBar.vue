@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import cls from './Sidebar.module.scss'
 import { ref } from 'vue'
 // import { useTranslation } from 'i18next-vue'
 import UIButton from '@/shared/ui/UIButton/UIButton.vue'
@@ -63,6 +64,6 @@ const toggleSidebar = (): void => {
     </div>
 </template>
 
-<style lang="scss" module="cls">
-@import '@/widgets/SideBar/ui/Sidebar.module.scss';
-</style>
+<!--<style lang="scss" module="cls">-->
+<!--@import '@/widgets/SideBar/ui/Sidebar.module.scss';-->
+<!--</style>-->
