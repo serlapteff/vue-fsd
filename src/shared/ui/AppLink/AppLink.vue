@@ -11,7 +11,7 @@
 import { RouterLink } from 'vue-router'
 import { defineComponent } from 'vue'
 
-export default defineComponent({
+export default {
     name: 'AppLink',
 
     props: {
@@ -30,7 +30,7 @@ export default defineComponent({
     //
     //     return { isExternalLink }
     // },
-})
+}
 </script>
 
 <!--<script setup lang="ts">-->

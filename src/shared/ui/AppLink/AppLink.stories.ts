@@ -1,4 +1,4 @@
-import Applink from './Applink.vue'
+import AppLink from './Applink.vue'
 import { Meta, Story, StoryFn } from '@storybook/vue3'
 import { AppLinkVariant } from './types'
 import ThemeDecorator from '@/shared/config/storybook/ThemeDecorator.vue'
@@ -6,8 +6,8 @@ import vueRouter from 'storybook-vue3-router'
 
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
 export default {
-    title: 'Shared/Applink',
-    component: Applink,
+    title: 'Shared/AppLink',
+    component: AppLink,
     // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -34,7 +34,7 @@ export default {
     args: {
         to: '/',
     },
-} as Meta<typeof Applink>
+} as Meta<typeof AppLink>
 
 // const Template: StoryFn<typeof UIButton> = (args) => ({
 //     // Components used in your story `template` are defined in the `components` object
@@ -49,15 +49,15 @@ export default {
 //             <template v-else v-slot:default>Текст</template>
 //         </UIButton>`,
 // })
-const Template: StoryFn<typeof Applink> = (args) => ({
+const Template: StoryFn<typeof AppLink> = (args) => ({
     // Components used in your story `template` are defined in the `components` object
-    components: { Applink },
+    components: { AppLink },
     // The story's `args` need to be mapped into the template through the `setup()` method
     setup() {
         return { args }
     },
     // And then the `args` are bound to your component with `v-bind="args"`
-    template: `<Applink :to="args.to" v-bind="args">{{ args.default }}</Applink>`,
+    template: `<AppLink :to="args.to" v-bind="args">{{ args.default }}</AppLink>`,
 })
 
 export const Primary = Template.bind({})
