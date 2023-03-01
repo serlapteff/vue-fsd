@@ -25,6 +25,7 @@
             "i18next-vue"
         ]
     },
-    "include": [ "src/**/*.vue","src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx"],
+    "include": ["src/**/*.vue", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx"],
+    "exclude": ["src/**/*.stories.ts"],
     "references": [{ "path": "./tsconfig.node.json" }]
 }
