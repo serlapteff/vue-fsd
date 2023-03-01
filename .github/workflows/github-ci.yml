@@ -1,0 +1,43 @@
+name: react-ln CI
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on:
+  push:
+    branches: [ master ]
+    pull_request:
+      branches: [ master, develop ]
+jobs:
+  pipeline-ci:
+    strategy:
+      matrix:
+        os: [ ubuntu-latest]
+        node-version: [ 16.x ]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Node.js  ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: install modules
+        run: npm install
+      - name: production build
+        run: npm run build:prod
+        if: always()
+      - name: lint typescript
+        run: npm run lint:ts
+        if: always()
+      - name: lint scss
+        run: npm run lint:styles
+        if: always()
+      - name: unit testing
+        run: npm run test:unit
+        if: always()
+      - name: build storybook
+        run: npm run storybook:build
+        if: always()
+      - name: screenshot testing
+        run: npm run test:ui:ci
+        if: always()
