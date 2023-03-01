@@ -1,7 +1,6 @@
 <script setup lang="ts">
-// import { Locales, setLocale } from '@/shared/config/i18n/i18n'
-import { useTranslation } from 'i18next-vue'
 import { reactive, ref } from 'vue'
+import i18next from 'i18next'
 
 const locales = reactive({
     ru: {
@@ -11,7 +10,7 @@ const locales = reactive({
         nativeName: 'EN',
     },
 })
-const { i18next } = useTranslation()
+// const localesLangs = computed(() => Object.keys(locales))
 
 const changeLang = (lng: string) => {
     console.log(lng)
@@ -21,7 +20,6 @@ const curLng = ref(localStorage.getItem('i18nextLng') || 'ru')
 i18next.on('initialized', function () {
     curLng.value = i18next.language
 })
-// })
 </script>
 
 <template>

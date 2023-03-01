@@ -15,7 +15,7 @@ const curTheme =
 
 localStorage.setItem(LOCAL_STORAGE_THEME_KEY, curTheme)
 export function useTheme(): UseThemeResult {
-    console.log(import.meta.env)
+    // console.log(import.meta.env)
 
     const theme = ref<Theme>(curTheme)
     const toggleTheme = () => {
