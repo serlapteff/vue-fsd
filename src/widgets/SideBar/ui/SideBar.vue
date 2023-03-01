@@ -64,5 +64,5 @@ const toggleSidebar = (): void => {
 </template>
 
 <style lang="scss" module="cls">
-@import 'Sidebar.module';
+@import '@/widgets/SideBar/ui/Sidebar.module.scss';
 </style>
