@@ -25,10 +25,13 @@ const toggleSidebar = (): void => {
 // const paths = computed(() => RouthPath)
 </script>
 <template>
-    <div data-test="sidebar" :class="['Sidebar', { ['collapsed']: collapsed }]">
+    <div
+        data-test="sidebar"
+        :class="[cls.Sidebar, { [cls.collapsed]: collapsed }]"
+    >
         <UIButton
             data-test="toggleSidebar"
-            class="collapsedBtn"
+            :class="cls.collapsedBtn"
             :variant="ButtonVariant.BACKGROUND_INVERT"
             :size="ButtonSize.XL"
             squire
@@ -36,31 +39,31 @@ const toggleSidebar = (): void => {
         >
             {{ collapsed ? '>' : '<' }}
         </UIButton>
-        <div class="navItems">
+        <div :class="cls.navItems">
             <AppLink
-                class="navItem"
+                :class="cls.navItem"
                 :variant="AppLinkVariant.PRIMARY"
                 :to="RouthPath.main"
             >
-                <IconHome class="icon" />
+                <IconHome :class="cls.icon" />
                 <span>{{ $t('Главная') }}</span>
             </AppLink>
             <AppLink
-                class="navItem"
+                :class="cls.navItem"
                 :variant="AppLinkVariant.PRIMARY"
                 :to="RouthPath.about"
             >
-                <IconAbout class="icon" />
+                <IconAbout :class="cls.icon" />
                 <span>{{ $t('О компании') }}</span>
             </AppLink>
         </div>
-        <div class="switchers">
+        <div :class="cls.switchers">
             <ThemeSwitcher />
-            <LangSwitcher class="langSwitcher" />
+            <LangSwitcher :class="cls.langSwitcher" />
         </div>
     </div>
 </template>
 
-<style lang="scss" scoped>
-@import '@/widgets/SideBar/ui/Sidebar.scss';
+<style lang="scss" module="cls">
+@import './Sidebar.module.scss';
 </style>
