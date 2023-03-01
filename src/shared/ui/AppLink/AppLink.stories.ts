@@ -1,4 +1,4 @@
-import AppLink from './Applink.vue'
+import AppLink from '@/shared/ui/AppLink/AppLink.vue'
 import { Meta, Story, StoryFn } from '@storybook/vue3'
 import { AppLinkVariant } from './types'
 import ThemeDecorator from '@/shared/config/storybook/ThemeDecorator.vue'
