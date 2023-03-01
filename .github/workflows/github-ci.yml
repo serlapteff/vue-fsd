@@ -1,4 +1,4 @@
-name: react-ln CI
+name: vue-fsd CI
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
