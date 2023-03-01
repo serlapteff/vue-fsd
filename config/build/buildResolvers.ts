@@ -12,6 +12,11 @@ export function buildResolvers(options: BuildOptions) {
                 //     new URL(options.paths.src, import.meta.url)
                 // ),
             },
+            // {
+            //     // this is required for the SCSS modules
+            //     find: /^@(.*)$/,
+            //     replacement: '$1',
+            // },
         ],
     }
 }

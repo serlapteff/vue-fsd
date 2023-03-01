@@ -24,5 +24,5 @@ export default defineComponent({
 })
 </script>
 <style lang="scss" module="cls">
-@import 'NavBar.module.css';
+@import 'NavBar.module';
 </style>
