@@ -8,7 +8,7 @@
     </router-link>
 </template>
 <script lang="ts">
-import { RouterLink, useLink } from 'vue-router'
+import { RouterLink } from 'vue-router'
 import { defineComponent } from 'vue'
 
 export default defineComponent({

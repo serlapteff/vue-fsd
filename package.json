@@ -5,7 +5,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build:prod": "vue-tsc && vite build --mode production",
+        "build:prod": "vite build --mode production",
         "build:dev": "vue-tsc && vite build --mode development",
         "preview": "vite preview",
         "lint:ts": "eslint \"**/*.{vue,ts,tsx}\"",
