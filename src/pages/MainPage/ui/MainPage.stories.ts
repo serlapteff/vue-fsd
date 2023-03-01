@@ -16,7 +16,7 @@ export default {
             template: `<ThemeDecorator theme="default"><story /></ThemeDecorator>`,
         }),
     ],
-} as Meta<MainPage>
+} as Meta<typeof MainPage>
 
 const Template: StoryFn<typeof MainPage> = (args) => ({
     components: { MainPage },

@@ -18,7 +18,7 @@ export default {
             template: `<ThemeDecorator theme="default"><story /></ThemeDecorator>`,
         }),
     ],
-} as Meta<ThemeSwitcher>
+} as Meta<typeof ThemeSwitcher>
 
 const Template: StoryFn<typeof ThemeSwitcher> = (args) => ({
     components: { ThemeSwitcher },

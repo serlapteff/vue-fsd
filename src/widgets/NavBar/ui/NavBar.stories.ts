@@ -18,7 +18,7 @@ export default {
             template: `<ThemeDecorator theme="default"><story /></ThemeDecorator>`,
         }),
     ],
-} as Meta<NavBar>
+} as Meta<typeof NavBar>
 
 const Template: StoryFn<typeof NavBar> = (args) => ({
     components: { NavBar },

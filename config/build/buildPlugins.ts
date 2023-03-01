@@ -5,6 +5,7 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 import stylelint from 'vite-plugin-stylelint'
 import svgLoader from 'vite-svg-loader'
 import eslint from 'vite-plugin-eslint'
+import checker from 'vite-plugin-checker'
 
 export function buildPlugins(options: BuildOptions): PluginOption[] {
     return [
@@ -16,5 +17,8 @@ export function buildPlugins(options: BuildOptions): PluginOption[] {
             fix: true,
         }),
         svgLoader(),
+        checker({
+            vueTsc: true,
+        }),
     ]
 }

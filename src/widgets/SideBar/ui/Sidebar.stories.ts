@@ -18,7 +18,7 @@ export default {
             template: `<ThemeDecorator theme="default"><story /></ThemeDecorator>`,
         }),
     ],
-} as Meta<SideBar>
+} as Meta<typeof SideBar>
 
 const Template: StoryFn<typeof SideBar> = (args) => ({
     components: { SideBar },

@@ -30,7 +30,7 @@ export default {
             template: `<ThemeDecorator theme="default"><story /></ThemeDecorator>`,
         }),
     ],
-} as Meta<UIButton>
+} as Meta<typeof UIButton>
 
 // const Template: StoryFn<typeof UIButton> = (args) => ({
 //     // Components used in your story `template` are defined in the `components` object

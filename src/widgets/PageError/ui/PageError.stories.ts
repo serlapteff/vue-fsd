@@ -16,7 +16,7 @@ export default {
             template: `<ThemeDecorator theme="default"><story /></ThemeDecorator>`,
         }),
     ],
-} as Meta<PageError>
+} as Meta<typeof PageError>
 
 const Template: StoryFn<typeof PageError> = (args) => ({
     components: { PageError },

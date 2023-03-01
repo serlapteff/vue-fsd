@@ -9,10 +9,10 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from 'vue'
 import AppLink from '@/shared/ui/AppLink/AppLink.vue'
-import { AppLinkVariant } from '@/shared/ui/AppLink/types.ts'
+import { AppLinkVariant } from '@/shared/ui/AppLink/types'
 
 export default defineComponent({
     computed: {

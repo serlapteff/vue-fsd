@@ -16,7 +16,7 @@ export default {
             template: `<ThemeDecorator theme="default"><story /></ThemeDecorator>`,
         }),
     ],
-} as Meta<NotFoundPage>
+} as Meta<typeof NotFoundPage>
 
 const Template: StoryFn<typeof NotFoundPage> = (args) => ({
     components: { NotFoundPage },

@@ -34,7 +34,7 @@ export default {
     args: {
         to: '/',
     },
-} as Meta<Applink>
+} as Meta<typeof Applink>
 
 // const Template: StoryFn<typeof UIButton> = (args) => ({
 //     // Components used in your story `template` are defined in the `components` object

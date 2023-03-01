@@ -42,7 +42,7 @@ export default {
             },
         },
     },
-} as Meta<LangSwitcher>
+} as Meta<typeof LangSwitcher>
 
 // const Template: StoryFn<typeof UIButton> = (args) => ({
 //     // Components used in your story `template` are defined in the `components` object
