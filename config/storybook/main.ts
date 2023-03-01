@@ -4,7 +4,7 @@ import { mergeConfig } from 'vite'
 import { ViteFinal } from '@storybook/builder-vite'
 import svgLoader from 'vite-svg-loader'
 module.exports = {
-    stories: ['./../src/**/*.stories.@(js|jsx|ts|tsx)'],
+    stories: ['../../src/**/*.stories.@(js|jsx|ts|tsx)'],
     addons: [
         '@storybook/addon-links',
         '@storybook/addon-essentials',
