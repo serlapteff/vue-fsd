@@ -86,6 +86,7 @@
             "ignoreCaret": true
         },
         "chromeTolerance": false,
+        "chromeDockerUseCopy": true,
         "configurations": {
             "chrome.laptop": {
                 "target": "chrome.docker",
