@@ -11,7 +11,15 @@
     --font-size-xl: 32px;
     --font-line-xl: 40px;
     --font-xl: var(--font-line-xl) / var(--font-line-xl) var(--font-family-main);
+
+    // Размеры
     --nav-bar-height: 60px;
     --sidebar-width: 300px;
     --sidebar-width-collpased: 80px;
+
+    // z - index
+    --modal-z-index: 100;
+
+    // Цвета
+    --overlay-color: rgb(0 0 0 / 60%)
 }

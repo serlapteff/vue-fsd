@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { provide, readonly } from 'vue'
+import { provide, readonly, ref } from 'vue'
 import { useTheme } from '@/shared/lib/composables/theme/useTheme'
 import { NavBar } from '@/widgets/NavBar/index'
 import { Routing } from '@/app/providers/router/index'

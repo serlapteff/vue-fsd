@@ -1,0 +1,71 @@
+.overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    backdrop-filter: blur(8px);
+    background: var(--overlay-color);
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.Modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    padding: 20px;
+    border-radius: 12px;
+    background: var(--bg-color);
+    transition: all 0.3s ease;
+    max-width: 60%;
+}
+
+.opened {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: var(--modal-z-index);
+}
+
+.nested-enter-active, .nested-leave-active {
+    transition: all 0.3s ease-in-out;
+}
+
+/* delay leave of parent element */
+.nested-leave-active {
+    transition-delay: 0.10s;
+}
+
+.nested-enter-from,
+.nested-leave-to {
+    //transform: translateY(30px);
+    opacity: 0;
+}
+
+/* we can also transition nested elements using nested selectors */
+.nested-enter-active .content,
+.nested-leave-active .content {
+    transition: all 0.3s ease-in-out;
+}
+
+/* delay enter of nested element */
+.nested-enter-active .content {
+    transition-delay: 0.10s;
+}
+
+.nested-enter-from .content,
+.nested-leave-to .content {
+    transform: translateY(30px) scale(0.7);
+
+    /*
+        Hack around a Chrome 96 bug in handling nested opacity transitions.
+      This is not needed in other browsers or Chrome 99+ where the bug
+      has been fixed.
+    */
+    opacity: 0.001;
+}

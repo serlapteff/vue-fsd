@@ -1,27 +1,31 @@
 <template>
     <div :class="cls['nav-bar']">
-        <AppLink :class="cls.link" :variant="AppLinkVariant.PRIMARY" to="/"
-            >Главная</AppLink
-        >
-        <AppLink :class="cls.link" :variant="AppLinkVariant.PRIMARY" to="/about"
-            >О компании</AppLink
-        >
+        <UIButton :variant="ButtonVariant.CLEAR" @click="onToggleModal(true)">{{
+            $t('Войти')
+        }}</UIButton>
+        <UIModal :is-open="isAuthModal" :on-close="() => onToggleModal(false)">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Consequuntur cum cumque distinctio eveniet facilis, fugiat
+                itaque magni nulla possimus quis rem sed, sequi similique
+                suscipit tempore ullam voluptate voluptates. Quo.
+            </div>
+        </UIModal>
     </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-import AppLink from '@/shared/ui/AppLink/AppLink.vue'
-import { AppLinkVariant } from '@/shared/ui/AppLink/types'
+<script setup lang="ts">
+import { ref } from 'vue'
+import UIButton from '@/shared/ui/UIButton/UIButton.vue'
+import { ButtonVariant } from '@/shared/ui/UIButton/types'
+import UIModal from '@/shared/ui/Modal/UIModal.vue'
 
-export default defineComponent({
-    computed: {
-        AppLinkVariant() {
-            return AppLinkVariant
-        },
-    },
-    components: { AppLink },
-})
+const isAuthModal = ref<boolean>(false)
+
+const onToggleModal = (value: boolean): void => {
+    isAuthModal.value = value
+}
+// defineEmits([])
 </script>
 <style lang="scss" module="cls">
 @import 'NavBar.module';
